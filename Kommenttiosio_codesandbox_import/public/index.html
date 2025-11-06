@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kommenttiosio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div id="chat">
+      <div id="messages" aria-live="polite"></div>
+
+      <div id="inputRow" class="input-row" hidden>
+        <input id="messageInput" placeholder="Type your message..." maxlength="250" autocomplete="off" />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nickname modal -->
+  <div id="nickModal" class="modal">
+    <div class="modal-box">
+      <h2>Valitse nimimerkki</h2>
+      <input id="nickInput" placeholder="Nimimerkki (esim. Bia2005)" maxlength="20" />
+      <div class="actions">
+        <button id="joinBtn">Liity chattiin</button>
+      </div>
+      <p class="hint">Kommentit näkyvät kaikille. Pidä se ystävällisenä 💬</p>
+    </div>
+  </div>
+
+  <audio id="msgSound" preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_b4ffcc6d57.mp3?filename=message-pop-14732.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

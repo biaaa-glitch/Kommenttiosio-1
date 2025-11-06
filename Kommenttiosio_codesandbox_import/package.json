@@ -1,0 +1,13 @@
+{
+  "name": "kommenttiosio",
+  "version": "1.0.0",
+  "description": "Kommenttiosio - Nostalgia style live chat (Twitch-like)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
